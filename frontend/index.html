@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambient Voice Translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-card">
+        <div class="header">
+            <h1>Ambient Translator</h1>
+            <p class="subtitle">Real-time Ambient Conversation Translator</p>
+        </div>
+
+        <!-- Custom Searchable Dropdown Selection -->
+        <div class="language-selection">
+            <!-- Speaker Language -->
+            <div class="lang-box">
+                <label>Speaker Language:</label>
+                <div class="custom-dropdown" id="sourceDropdown">
+                    <input type="text" id="sourceInput" placeholder="Search language..." autocomplete="off">
+                    <div class="dropdown-list" id="sourceList"></div>
+                </div>
+            </div>
+
+            <div class="swap-icon">➔</div>
+
+            <!-- Target Language -->
+            <div class="lang-box">
+                <label>Your Language:</label>
+                <div class="custom-dropdown" id="targetDropdown">
+                    <input type="text" id="targetInput" placeholder="Search language..." autocomplete="off">
+                    <div class="dropdown-list" id="targetList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Captions & Output Box -->
+        <div class="caption-container">
+            <div class="caption-box">
+                <small>Original Speech:</small>
+                <p id="speechOutput">Speak something when listening mode is ON...</p>
+            </div>
+            <div class="caption-box translated">
+                <small>Translation:</small>
+                <p id="translatedOutput">Translation will appear here...</p>
+            </div>
+        </div>
+
+        <!-- Toggle Controls -->
+        <div class="control-section">
+            <div class="toggle-row">
+                <span>Listening Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="enableToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="status-badge">
+                System Status: <span id="statusText">OFF</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
